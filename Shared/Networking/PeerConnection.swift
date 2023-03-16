@@ -32,7 +32,7 @@ class PeerConnection: ObservableObject {
   let endpoint: NWEndpoint?
   let initiatedConnection: Bool
 
-  // Create an outbound connection when the user initiates a game.
+  // Create an outbound connection when the user initiates a connection.
   init(endpoint: NWEndpoint, interface: NWInterface?, delegate: PeerConnectionDelegate) {
     self.delegate = delegate
     self.endpoint = nil
@@ -44,7 +44,7 @@ class PeerConnection: ObservableObject {
     startConnection()
   }
     
-  // Create an outbound connection when the user initiates a game via DeviceDiscoveryUI.
+  // Create an outbound connection when the user initiates a connection via DeviceDiscoveryUI.
   init(endpoint: NWEndpoint, delegate: PeerConnectionDelegate) {
     self.delegate = delegate
     self.endpoint = endpoint
@@ -60,7 +60,7 @@ class PeerConnection: ObservableObject {
     startConnection()
   }
 
-  // Handle an inbound connection when the user receives a game request.
+  // Handle an inbound connection when the user receives a connection request.
   init(connection: NWConnection) {
     self.endpoint = nil
     self.connection = connection
@@ -69,7 +69,7 @@ class PeerConnection: ObservableObject {
     startConnection()
   }
 
-  // Handle the user exiting the game.
+  // Handle the user exiting the connection.
   func cancel() {
     if let connection = self.connection {
       connection.cancel()

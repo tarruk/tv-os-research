@@ -22,7 +22,7 @@ class PeerListener {
   var name: String?
   let type: ServiceType
 
-  // Create a listener that advertises the game's app service
+  // Create a listener that advertises the app service
   // and has a delegate to handle inbound connections.
   init(delegate: PeerConnectionDelegate) {
     self.type = .applicationService
@@ -38,7 +38,7 @@ class PeerListener {
       self.listener = listener
 
       // Set the service to advertise.
-      listener.service = NWListener.Service(applicationService: "RickAndMorty")
+      listener.service = NWListener.Service(applicationService: "PlaygroundOS")
 
       startListening()
     } catch {
@@ -79,7 +79,7 @@ class PeerListener {
         // Accept a new connection.
         sharedConnection = PeerConnection(connection: newConnection)
       } else {
-        // If a game is already in progress, reject it.
+        // If a connection is already in progress, reject it.
         newConnection.cancel()
       }
     }
