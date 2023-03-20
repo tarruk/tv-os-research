@@ -11,6 +11,10 @@
 		E50EDB3329C35B83002145AD /* PeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50EDB3229C35B83002145AD /* PeerConnection.swift */; };
 		E5276CBD29C3A9D300777325 /* tvOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5276CBC29C3A9D300777325 /* tvOS-Info.plist */; };
 		E5276CBF29C3B3B900777325 /* iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5276CBE29C3B3B900777325 /* iOS-Info.plist */; };
+		E57AB53129C4E77200875E82 /* DevicePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AB53029C4E77200875E82 /* DevicePickerController.swift */; };
+		E57AB53629C4EA0100875E82 /* DevicePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AB53529C4EA0100875E82 /* DevicePickerTableViewCell.swift */; };
+		E57AB53729C4F08300875E82 /* PeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50EDB3229C35B83002145AD /* PeerConnection.swift */; };
+		E57AB53829C4F08600875E82 /* PeerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50EDB3029C35B5F002145AD /* PeerListener.swift */; };
 		E5A8149729C21CF600561F31 /* PlaygroundOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8149629C21CF600561F31 /* PlaygroundOSApp.swift */; };
 		E5A8149929C21CF600561F31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8149829C21CF600561F31 /* ContentView.swift */; };
 		E5A8149B29C21CF700561F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A8149A29C21CF700561F31 /* Assets.xcassets */; };
@@ -26,6 +30,8 @@
 		E50EDB3229C35B83002145AD /* PeerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerConnection.swift; sourceTree = "<group>"; };
 		E5276CBC29C3A9D300777325 /* tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tvOS-Info.plist"; sourceTree = "<group>"; };
 		E5276CBE29C3B3B900777325 /* iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
+		E57AB53029C4E77200875E82 /* DevicePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePickerController.swift; sourceTree = "<group>"; };
+		E57AB53529C4EA0100875E82 /* DevicePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePickerTableViewCell.swift; sourceTree = "<group>"; };
 		E5A8149329C21CF600561F31 /* PlaygroundOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaygroundOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A8149629C21CF600561F31 /* PlaygroundOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundOSApp.swift; sourceTree = "<group>"; };
 		E5A8149829C21CF600561F31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +69,31 @@
 				E50EDB3229C35B83002145AD /* PeerConnection.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E57AB52E29C4E74E00875E82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E57AB52F29C4E75800875E82 /* DevicePicker */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E57AB52F29C4E75800875E82 /* DevicePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E57AB53429C4E9E700875E82 /* Cell */,
+				E57AB53029C4E77200875E82 /* DevicePickerController.swift */,
+			);
+			path = DevicePicker;
+			sourceTree = "<group>";
+		};
+		E57AB53429C4E9E700875E82 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E57AB53529C4EA0100875E82 /* DevicePickerTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E5A8148A29C21CF600561F31 = {
@@ -107,6 +138,7 @@
 		E5A814A929C2373600561F31 /* PlatygroundtvOS */ = {
 			isa = PBXGroup;
 			children = (
+				E57AB52E29C4E74E00875E82 /* Views */,
 				E5A814AA29C2373600561F31 /* PlatygroundtvOSApp.swift */,
 				E5A814AC29C2373600561F31 /* ContentView.swift */,
 				E5A814AE29C2373800561F31 /* Assets.xcassets */,
@@ -245,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57AB53829C4F08600875E82 /* PeerListener.swift in Sources */,
 				E5A814AD29C2373600561F31 /* ContentView.swift in Sources */,
 				E5A814AB29C2373600561F31 /* PlatygroundtvOSApp.swift in Sources */,
+				E57AB53729C4F08300875E82 /* PeerConnection.swift in Sources */,
+				E57AB53629C4EA0100875E82 /* DevicePickerTableViewCell.swift in Sources */,
+				E57AB53129C4E77200875E82 /* DevicePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
